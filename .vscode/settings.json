@@ -1,0 +1,9 @@
+{
+	"makefile.launchConfigurations": [
+		{
+			"cwd": "/Users/bnaji/Desktop/so_long",
+			"binaryPath": "/Users/bnaji/Desktop/so_long/so_long",
+			"binaryArgs": []
+		}
+	]
+}
