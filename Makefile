@@ -29,6 +29,10 @@ ${NAME}: ${OBJ_NAME}
 	ar -r $(NAME) $(OBJ_NAME)
 	libtool -static -o $(NEW_NAME) $(MLX_LIB) $(LIBFT_LIB) $(NAME)
 
+linux: ${OBJ_NAME}
+	$(MAKE) -C $(LIBFT_DIR)
+	gcc $(CFLAG) $(SRC_NAME) ./libft/libft.a -L ./minilibx-linux -lmlx -lm -lX11 -lXext -o so_long
+
 debug:
 	gcc -g $(DBG_FLAGS) $(NEW_NAME) -o $(EXEC_NAME)
 
@@ -44,7 +48,7 @@ clean:
 
 fclean: clean
 	rm -f ${NAME} ${NEW_NAME}
-	rm -f $(LIBFT_LIB) $(MLX_LIB)
+	rm -f $(MLX_LIB)
 
 e:
 	rm $(EXEC_NAME)
@@ -52,5 +56,7 @@ e:
 cleanall: fclean e
 
 re: fclean all
+
+renux: fclean linux
 
 reall: fclean all run

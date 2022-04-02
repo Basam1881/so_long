@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bnaji <bnaji@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dfurneau <dfurneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 13:24:58 by bnaji             #+#    #+#             */
-/*   Updated: 2021/11/08 16:03:52 by bnaji            ###   ########.fr       */
+/*   Updated: 2022/04/02 22:45:06 by dfurneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,26 @@
 # define FPS 2
 # define SPEED 5
 # define SPRITE_SIZE 9
+
+
+/** For Mac**/
 # define ESC_KEY 53
-# define WIN_KEY -272630608
 # define D_KEY 2
 # define S_KEY 1
 # define A_KEY 0
 # define W_KEY 13
+/**       **/
+
+
+/** For Linux**/
+// # define ESC_KEY 65307
+// # define D_KEY 100
+// # define S_KEY 115
+// # define A_KEY 97
+// # define W_KEY 119
+/**       **/
+
+# define WIN_KEY -272630608
 # define Y_BTN "./images/yellow_button.xpm"
 # define EXIT "./images/exit.xpm"
 # define STAR "./images/star.xpm"

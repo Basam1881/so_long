@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bnaji <bnaji@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dfurneau <dfurneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 22:41:32 by bnaji             #+#    #+#             */
-/*   Updated: 2021/11/06 16:17:42 by bnaji            ###   ########.fr       */
+/*   Updated: 2022/04/02 22:17:50 by dfurneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,8 @@ static char	*is_positive(long n, char *str)
 {
 	int		nb;
 	int		count;
-	int		i;
 
 	nb = n;
-	i = 0;
 	count = count_digits(nb);
 	str = (char *)malloc(sizeof(char) * count + 1);
 	if (!str)
@@ -52,11 +50,9 @@ static char	*is_negative(long n, char *str)
 {
 	int	nb;
 	int	count;
-	int	i;
 
 	n = n * -1;
 	nb = n;
-	i = 0;
 	count = count_digits(nb);
 	str = (char *)malloc(sizeof(char) * count + 2);
 	if (!str)

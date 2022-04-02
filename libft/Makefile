@@ -56,14 +56,14 @@ NAME = libft.a
 all: ${NAME}
 
 ${NAME}: ${OBJ_NAME}
-	gcc -c ${CFLAG} ${SRC_NAME} -I ../so_long.h
+	gcc -c ${CFLAG} ${SRC_NAME}
 	ar -rc $(NAME) $(OBJ_NAME)
 
 %.o: %.c
 	gcc ${CFLAG} -c $< -o ${<:%.c=%.o}
 
 bonus: ${NAME} ${OBJ_BONUS}
-	gcc -c ${CFLAG} ${SRC_BONUS} -I ../so_long.h
+	gcc -c ${CFLAG} ${SRC_BONUS}
 	ar -rc ${NAME} ${OBJ_NAME} ${OBJ_BONUS}
 
 clean:
